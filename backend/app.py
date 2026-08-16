@@ -2,10 +2,8 @@
 
 from flask import Flask, jsonify
 
-from backend.auth_routes import bp as auth_blueprint
 from backend.core.errors import register_error_handlers
 from backend.core.jobs import job_registry
-from backend.features.countdown_timer.feature import countdown_timer_bp
 from backend.features.save_items_with_price.feature import bp as save_items_with_price_blueprint
 from backend.features.set_cooling_off_period.feature import bp as set_cooling_off_period_blueprint
 from backend.features.reminder_notification.feature import bp as reminder_notification_blueprint
@@ -19,13 +17,11 @@ def create_app(testing: bool = False) -> Flask:
     app = Flask(__name__)
     app.config["TESTING"] = bool(testing)
     register_error_handlers(app)
-    app.register_blueprint(auth_blueprint)
     app.register_blueprint(save_items_with_price_blueprint)
     app.register_blueprint(set_cooling_off_period_blueprint)
     app.register_blueprint(reminder_notification_blueprint)
     app.register_blueprint(buy_skip_decision_blueprint)
     app.register_blueprint(track_estimated_money_saved_blueprint)
-    app.register_blueprint(countdown_timer_bp)
     register_set_cooling_off_period_background(job_registry)
     register_reminder_notification_background(job_registry)
 

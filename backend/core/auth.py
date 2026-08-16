@@ -1,7 +1,6 @@
 """HS256 bearer tokens and PBKDF2 password utilities."""
 
 import base64
-import binascii
 import hashlib
 import hmac
 import json
@@ -47,7 +46,7 @@ def verify_password(password: str, encoded: str) -> bool:
             int(rounds),
         )
         return hmac.compare_digest(actual, _decode_segment(expected))
-    except (binascii.Error, TypeError, ValueError):
+    except (TypeError, ValueError):
         return False
 
 
@@ -120,7 +119,6 @@ def require_auth(handler):
             g.identity = _verify_token(authorization[7:].strip())
         except ValueError as exc:
             return jsonify({"error": str(exc)}), 401
-        g.user_id = g.identity["sub"]
         return handler(*args, **kwargs)
 
     return wrapped
@@ -139,7 +137,6 @@ def load_optional_auth(handler):
             g.identity = _verify_token(authorization[7:].strip())
         except ValueError as exc:
             return jsonify({"error": str(exc)}), 401
-        g.user_id = g.identity["sub"]
         return handler(*args, **kwargs)
 
     return wrapped

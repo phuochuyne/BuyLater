@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="zorentia-compiler" content="{&quot;compiler_version&quot;:&quot;frontend-visual-compiler-v3&quot;,&quot;design_contract_hash&quot;:&quot;d24e8abb21b8cec93501d852bcc481a982296972e27bae9b1fb75f8cdcef7d04&quot;,&quot;route&quot;:&quot;/settings/notifications&quot;,&quot;screen_id&quot;:&quot;capability_reminder_notification_fd8968f7.screen.notification_settings&quot;}">
+  <title>Notification Settings · BuyLater</title>
+  <style data-zorentia-compiler="frontend-visual-compiler-v3">:root {
+  --primary:#6366F1; --primary-hover:#BE185D;
+  --background:#FFFFFF; --surface:#F9FAFB;
+  --surface-alt:#F6EAF0; --text:#111827;
+  --muted:#75646D; --border:#E5E7EB;
+  --success:#10B981; --danger:#B93838;
+  --radius:16px; --shadow:0 20px 52px rgba(75,35,55,.11);
+}
+* { box-sizing:border-box; }
+html { color-scheme:light; background:var(--background); }
+body { margin:0; min-height:100vh; background:var(--background); color:var(--text);
+  font-family:"Inter",ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased; }
+button,input,textarea,select { font:inherit; }
+a { color:inherit; text-decoration:none; }
+svg{display:inline-block;flex:none;vertical-align:middle;max-width:100%}
+svg[viewBox]:not([data-chart]):not(.chart){max-width:4rem!important;max-height:4rem!important}
+svg:not([width]):not([height]):not([data-chart]):not(.chart){width:1.25rem;height:1.25rem}
+button>svg,.button>svg,a>svg,.badge>svg,[data-icon],svg.lucide{width:1.125rem;height:1.125rem;flex:none}
+svg.w-3{width:.75rem!important}svg.h-3{height:.75rem!important}
+svg.w-4{width:1rem!important}svg.h-4{height:1rem!important}
+svg.w-5{width:1.25rem!important}svg.h-5{height:1.25rem!important}
+svg.w-6{width:1.5rem!important}svg.h-6{height:1.5rem!important}
+svg.w-7{width:1.75rem!important}svg.h-7{height:1.75rem!important}
+svg.w-8{width:2rem!important}svg.h-8{height:2rem!important}
+svg.w-10{width:2.5rem!important}svg.h-10{height:2.5rem!important}
+svg.w-12{width:3rem!important}svg.h-12{height:3rem!important}
+svg.w-16{width:4rem!important}svg.h-16{height:4rem!important}
+.icon-sm{width:1rem!important;height:1rem!important}.icon-md{width:1.25rem!important;height:1.25rem!important}.icon-lg{width:1.75rem!important;height:1.75rem!important}
+[hidden] { display:none !important; }
+.app-shell { display:grid; grid-template-columns:272px minmax(0,1fr); min-height:100vh; }
+.app-sidebar { position:sticky; top:0; z-index:20; height:100vh; display:flex; min-width:0;
+  flex-direction:column; overflow:auto; border-right:1px solid var(--border); background:var(--surface);
+  box-shadow:8px 0 32px rgba(15,23,42,.035); }
+.app-brand { display:flex; align-items:center; gap:12px; min-height:82px; padding:18px 22px;
+  border-bottom:1px solid var(--border); font-size:15px; font-weight:750; letter-spacing:-.02em; }
+.brand-mark { display:grid; width:38px; height:38px; flex:none; place-items:center; border-radius:12px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-hover)); color:white; font-size:16px;
+  box-shadow:0 10px 25px color-mix(in srgb,var(--primary) 28%,transparent); }
+.app-sidebar-content { display:flex; min-height:0; flex:1; flex-direction:column; padding:18px 14px; }
+.app-sidebar-content aside { display:flex; min-height:0; flex:1; flex-direction:column; }
+.app-sidebar-content nav { display:grid; gap:6px; }
+.app-sidebar-content nav a { display:flex; min-height:43px; align-items:center; gap:10px; border-radius:11px;
+  padding:0 13px; color:var(--muted); font-size:14px; font-weight:650; transition:.18s ease; }
+.app-sidebar-content nav a:hover,.app-sidebar-content nav a:focus-visible { color:var(--primary);
+  background:color-mix(in srgb,var(--primary) 9%,var(--surface)); outline:none; }
+.app-workspace { display:flex; min-width:0; min-height:100vh; flex-direction:column; }
+.app-header { position:sticky; top:0; z-index:15; min-height:74px; border-bottom:1px solid var(--border);
+  background:color-mix(in srgb,var(--surface) 92%,transparent); backdrop-filter:blur(14px); }
+.app-header > header { display:flex; min-height:74px; align-items:center; justify-content:space-between;
+  gap:18px; padding:14px clamp(22px,4vw,52px); }
+.app-main { width:100%; min-width:0; max-width:1560px; flex:1; margin:0 auto;
+  padding:38px clamp(22px,4vw,58px) 64px; }
+.app-footer { border-top:1px solid var(--border); color:var(--muted); background:var(--surface); }
+.app-footer > footer { padding:18px clamp(22px,4vw,52px); font-size:12px; }
+.page-header { display:flex; align-items:flex-end; justify-content:space-between; gap:24px; margin-bottom:28px; }
+.page-kicker { margin:0 0 8px; color:var(--primary); font-size:12px; font-weight:750;
+  letter-spacing:.12em; text-transform:uppercase; }
+.page-heading { margin:0; font-size:clamp(29px,4vw,44px); line-height:1.06; letter-spacing:-.045em; }
+.page-description { max-width:760px; margin:12px 0 0; color:var(--muted); line-height:1.7; }
+.panel-grid,.stats-grid,.form-grid,.card-grid { display:grid; gap:18px; }
+.panel-grid,.card-grid { grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); }
+.stats-grid { grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); }
+.form-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.panel,.data-card,.stat,.auth-card,.table-wrap { border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--surface); box-shadow:var(--shadow); }
+.panel,.data-card,.auth-card { padding:clamp(22px,3vw,32px); }
+.stat { padding:22px; }
+.stat-label { color:var(--muted); font-size:13px; font-weight:650; }
+.stat-value { margin-top:10px; font-size:31px; font-weight:760; letter-spacing:-.045em; }
+.panel-title { margin:0; font-size:19px; letter-spacing:-.025em; }
+.panel-copy { margin:8px 0 0; color:var(--muted); line-height:1.65; }
+.field { display:grid; gap:8px; } .field-full { grid-column:1/-1; }
+.label,label { color:var(--text); font-size:13px; font-weight:700; }
+.input,.textarea,.select,input:not([type="checkbox"]):not([type="radio"]),textarea,select { width:100%;
+  border:1px solid var(--border); border-radius:11px; padding:12px 14px; background:var(--surface);
+  color:var(--text); outline:none; transition:.18s ease; }
+.textarea,textarea { min-height:120px; resize:vertical; }
+.input:focus,.textarea:focus,.select:focus,input:focus,textarea:focus,select:focus { border-color:var(--primary);
+  box-shadow:0 0 0 4px color-mix(in srgb,var(--primary) 13%,transparent); }
+.toolbar,.actions { display:flex; flex-wrap:wrap; align-items:center; gap:10px; } .actions { margin-top:22px; }
+.button,button { display:inline-flex; min-height:42px; align-items:center; justify-content:center; gap:8px;
+  border:1px solid var(--border); border-radius:11px; padding:0 17px; cursor:pointer; background:var(--surface);
+  color:var(--text); font-weight:700; transition:transform .16s ease,background .16s ease,border-color .16s ease; }
+.button:hover,button:hover { transform:translateY(-1px); }
+.button:disabled,button:disabled { cursor:not-allowed; opacity:.6; transform:none; }
+.button-primary,button[type="submit"] { border-color:var(--primary); color:white; background:var(--primary); }
+.button-primary:hover,button[type="submit"]:hover { background:var(--primary-hover); }
+.button-secondary { border-color:var(--border); background:var(--surface); color:var(--text); }
+.badge { display:inline-flex; align-items:center; min-height:27px; border-radius:999px; padding:0 10px;
+  background:var(--surface-alt); color:var(--muted); font-size:12px; font-weight:700; }
+.alert { margin:14px 0; border-radius:11px; padding:12px 14px; font-size:13px; line-height:1.5; }
+.alert-error,[data-error-region] { border:1px solid color-mix(in srgb,var(--danger) 28%,transparent);
+  color:var(--danger); background:color-mix(in srgb,var(--danger) 7%,var(--surface)); }
+.alert-success,[data-success-region] { border:1px solid color-mix(in srgb,var(--success) 28%,transparent);
+  color:var(--success); background:color-mix(in srgb,var(--success) 7%,var(--surface)); }
+.empty-state { display:grid; min-height:220px; place-items:center; padding:36px; text-align:center;
+  border:1px dashed var(--border); border-radius:var(--radius); color:var(--muted); }
+.table-wrap { overflow:auto; } .table,table { width:100%; border-collapse:collapse; font-size:14px; }
+.table th,.table td,th,td { padding:14px 16px; border-bottom:1px solid var(--border); text-align:left; }
+.table th,th { color:var(--muted); background:var(--surface-alt); font-size:12px;
+  letter-spacing:.04em; text-transform:uppercase; }
+.generated-list { display:grid; gap:12px; }
+.generated-item { border:1px solid var(--border); border-radius:12px; padding:16px; background:var(--surface); }
+.generated-fields { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px 16px; margin:0; }
+.generated-fields dt { color:var(--muted); font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+.generated-fields dd { margin:4px 0 0; overflow-wrap:anywhere; font-size:14px; font-weight:650; }
+[data-loading="true"] { pointer-events:none; opacity:.68; }
+.app-shell[data-layout="auth"] { grid-template-columns:1fr; }
+.app-shell[data-layout="auth"] .app-sidebar { display:none; }
+.app-shell[data-layout="auth"] .app-main { display:grid; max-width:none; place-items:center;
+  background:radial-gradient(circle at 12% 10%,color-mix(in srgb,var(--primary) 13%,transparent),transparent 35%),var(--background); }
+.app-shell[data-layout="auth"] .auth-card { width:min(100%,500px); }
+@media (max-width:860px) {
+  .app-shell { grid-template-columns:1fr; }
+  .app-sidebar { position:relative; height:auto; border-right:0; border-bottom:1px solid var(--border); }
+  .app-brand { min-height:66px; padding:13px 18px; }
+  .app-sidebar-content { padding:10px 14px 14px; }
+  .app-sidebar-content nav { grid-auto-flow:column; grid-auto-columns:max-content; overflow:auto; }
+  .app-header { position:relative; } .app-main { padding:28px 18px 48px; }
+  .page-header { align-items:flex-start; flex-direction:column; } .form-grid { grid-template-columns:1fr; }
+  .field-full { grid-column:auto; }
+}</style>
+</head>
+<body data-screen-route="/settings/notifications">
+<div class="app-shell" data-layout="settings">
+  <aside class="app-sidebar" aria-label="Application navigation">
+    <div class="app-brand"><span class="brand-mark" aria-hidden="true">B</span><span>BuyLater</span></div>
+    <div class="app-sidebar-content"><aside class="app-sidebar">
+  <nav class="sidebar-nav">
+    <div class="nav-section">
+      <h3 class="nav-section-title">Items</h3>
+      <a href="/saved-items" class="nav-item">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M9 3v18M3 9h18"/>
+        </svg>
+        <span>Saved Items</span>
+      </a>
+      <a href="/saved-items/add" class="nav-item">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="16"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        <span>Add Item</span>
+      </a>
+      <a href="/items" class="nav-item">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+          <polyline points="12 6 12 12 16 14"/>
+        </svg>
+        <span>Items with Timer</span>
+      </a>
+    </div>
+    <div class="nav-section">
+      <h3 class="nav-section-title">Savings</h3>
+      <a href="/savings" class="nav-item">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="12" y1="1" x2="12" y2="23"/>
+          <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        <span>Dashboard</span>
+      </a>
+      <a href="/savings/history" class="nav-item">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
+          <polyline points="17 6 23 6 23 12"/>
+        </svg>
+        <span>History</span>
+      </a>
+    </div>
+    <div class="nav-section">
+      <h3 class="nav-section-title">Settings</h3>
+      <a href="/settings/notifications" class="nav-item">
+        <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+          <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+        </svg>
+        <span>Notifications</span>
+      </a>
+    </div>
+  </nav>
+</aside></div>
+  </aside>
+  <div class="app-workspace">
+    <div class="app-header"><header class="app-header">
+  <div class="container">
+    <div class="header-content">
+      <a href="/saved-items" class="logo">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+          <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+        </svg>
+        <span class="logo-text">BuyLater</span>
+      </a>
+      <nav class="header-nav">
+        <a href="/saved-items" class="nav-link">Items</a>
+        <a href="/savings" class="nav-link">Savings</a>
+        <a href="/settings/notifications" class="nav-link">Settings</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header></div>
+    <main id="main-content" class="app-main"><div class="page-header">
+  <div class="page-kicker">Settings</div>
+  <h1 class="page-heading">Notification Settings</h1>
+  <p class="page-description">Manage how BuyLater reminds you when your cooling-off period ends</p>
+</div>
+
+<div class="panel-grid">
+  <div class="panel">
+    <div class="panel-title">Push Notifications</div>
+    <p class="panel-copy">We'll send you a gentle reminder when your cooling-off period expires, giving you the chance to decide if you still want to make the purchase.</p>
+    
+    <div class="field" style="margin-top: 1.5rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border);">
+        <div style="flex: 1;">
+          <div style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;">Reminder Notifications</div>
+          <div style="font-size: 0.875rem; color: var(--muted);">Get notified when it's time to decide</div>
+        </div>
+        <label style="position: relative; display: inline-block; width: 48px; height: 28px; margin-left: 1rem;">
+          <input type="checkbox" id="notificationsEnabled" style="opacity: 0; width: 0; height: 0;">
+          <span style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #E5E7EB; transition: .3s; border-radius: 28px;"></span>
+          <span style="position: absolute; content: ''; height: 20px; width: 20px; left: 4px; bottom: 4px; background-color: white; transition: .3s; border-radius: 50%;"></span>
+        </label>
+      </div>
+    </div>
+
+    <div id="permissionStatus" style="margin-top: 1rem; padding: 1rem; background: var(--surface-alt); border-radius: var(--radius); border: 1px solid var(--border); display: none;">
+      <div style="display: flex; align-items: start; gap: 0.75rem;">
+        <svg class="icon-sm" style="flex-shrink: 0; margin-top: 0.125rem;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div style="flex: 1;">
+          <div style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;" id="statusTitle">Notifications Enabled</div>
+          <div style="font-size: 0.875rem; color: var(--muted);" id="statusMessage">You'll receive reminders when your cooling-off periods end.</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="permissionDenied" style="margin-top: 1rem; display: none;">
+      <div class="alert alert-error" style="margin-bottom: 1rem;">
+        <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+        </svg>
+        <div>
+          <div style="font-weight: 500;">Notifications Blocked</div>
+          <div style="font-size: 0.875rem; margin-top: 0.25rem;">You've previously denied notification permissions. To enable reminders, you'll need to update your browser settings.</div>
+        </div>
+      </div>
+      <a href="#" id="systemSettingsLink" class="button button-secondary" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+        <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+        </svg>
+        Open System Settings
+      </a>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="panel-title">About Reminders</div>
+    <p class="panel-copy">Our reminders are designed to support thoughtful decision-making without pressure. When your cooling-off period ends, we'll simply check in to see if you still want to proceed with your purchase.</p>
+    
+    <div style="margin-top: 1.5rem; padding: 1rem; background: var(--surface); border-radius: var(--radius); border: 1px solid var(--border);">
+      <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+        <svg class="icon-sm" style="flex-shrink: 0; margin-top: 0.125rem; color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div>
+          <div style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;">Timing</div>
+          <div style="font-size: 0.875rem; color: var(--muted);">You'll receive a notification when your cooling-off period expires</div>
+        </div>
+      </div>
+      
+      <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+        <svg class="icon-sm" style="flex-shrink: 0; margin-top: 0.125rem; color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <div>
+          <div style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;">No Pressure</div>
+          <div style="font-size: 0.875rem; color: var(--muted);">Our reminders use calm, neutral language to help you make the right choice</div>
+        </div>
+      </div>
+      
+      <div style="display: flex; align-items: start; gap: 0.75rem;">
+        <svg class="icon-sm" style="flex-shrink: 0; margin-top: 0.125rem; color: var(--primary);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+        </svg>
+        <div>
+          <div style="font-weight: 500; color: var(--text); margin-bottom: 0.25rem;">Your Control</div>
+          <div style="font-size: 0.875rem; color: var(--muted);">You can disable notifications at any time and still access your saved items</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></main>
+    <div class="app-footer"><footer class="app-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <p class="footer-brand">BuyLater</p>
+        <p class="footer-tagline">Make intentional purchase decisions</p>
+      </div>
+      <div class="footer-section">
+        <nav class="footer-nav">
+          <a href="/saved-items" class="footer-link">Items</a>
+          <a href="/savings" class="footer-link">Savings</a>
+          <a href="/settings/notifications" class="footer-link">Settings</a>
+        </nav>
+      </div>
+      <div class="footer-section">
+        <p class="footer-copyright">&copy; 2024 BuyLater. Save smarter.</p>
+      </div>
+    </div>
+  </div>
+</footer></div>
+<script src="/__frontend_assets/frontend/features/reminder_notification/notification_settings.js" defer></script>
+  </div>
+</div>
+</body>
+</html>

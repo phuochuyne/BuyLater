@@ -20,14 +20,3 @@ def test_protected_routes_reject_missing_authentication():
     assert response.status_code == 401
     response = client.get('/api/capability_set_cooling_off_period_ed5144db/cooling-periods/test-id')
     assert response.status_code == 401
-
-
-def test_internal_route_rejects_unconfigured_token(monkeypatch):
-    monkeypatch.setenv('DATABASE_URL', 'mysql+mysqlconnector://unused')
-    monkeypatch.setenv('JWT_SECRET', 'test-secret-that-is-long-enough')
-    monkeypatch.delenv('INTERNAL_JOB_TOKEN', raising=False)
-    response = create_app(testing=True).test_client().get(
-        '/api/internal/cooling-periods/expired',
-        headers={'Authorization': 'Bearer attacker-controlled-value'},
-    )
-    assert response.status_code == 403

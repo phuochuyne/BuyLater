@@ -18,7 +18,3 @@ or running the project, copy the error message into Goat Helper for step-by-step
    `flask --app 'backend:create_app()' run --debug`
 
 The generated API health endpoint is `GET /health`.
-
-Register with `POST /api/auth/register`, then send the returned token as
-`Authorization: Bearer <token>` when calling protected feature routes. Set a
-separate `INTERNAL_JOB_TOKEN` for the expired-cooling-period internal endpoint.

@@ -1,0 +1,103 @@
+{
+  "normalizations": {
+    "legacy_tailwind_runtime_removed": []
+  },
+  "project_slug": "buylater",
+  "route_collisions": [],
+  "runtime_verification": {
+    "errors": [
+      "frontend_application_boot_failed"
+    ],
+    "valid": false
+  },
+  "schema_version": "frontend-package-manifest-v3",
+  "screen_routes": [
+    {
+      "feature_id": "capability_save_items_with_price_bd77265a",
+      "path": "frontend/features/save_items_with_price/saved_items_list.html",
+      "route": "/saved-items",
+      "screen_id": "capability_save_items_with_price_bd77265a.screen.saved_items_list"
+    },
+    {
+      "feature_id": "capability_save_items_with_price_bd77265a",
+      "path": "frontend/features/save_items_with_price/add_item.html",
+      "route": "/saved-items/add",
+      "screen_id": "capability_save_items_with_price_bd77265a.screen.add_item"
+    },
+    {
+      "feature_id": "capability_save_items_with_price_bd77265a",
+      "path": "frontend/features/save_items_with_price/item_detail.html",
+      "route": "/saved-items/{id}",
+      "screen_id": "capability_save_items_with_price_bd77265a.screen.item_detail"
+    },
+    {
+      "feature_id": "capability_set_cooling_off_period_ed5144db",
+      "path": "frontend/features/set_cooling_off_period/select_cooling_off_period.html",
+      "route": "/items/new/cooling-period",
+      "screen_id": "capability_set_cooling_off_period_ed5144db.screen.select_cooling_period"
+    },
+    {
+      "feature_id": "capability_countdown_timer_df84298e",
+      "path": "frontend/features/countdown_timer/saved_items_list.html",
+      "route": "/items",
+      "screen_id": "capability_countdown_timer_df84298e.screen.items_list"
+    },
+    {
+      "feature_id": "capability_reminder_notification_fd8968f7",
+      "path": "frontend/features/reminder_notification/notification_settings.html",
+      "route": "/settings/notifications",
+      "screen_id": "capability_reminder_notification_fd8968f7.screen.notification_settings"
+    },
+    {
+      "feature_id": "capability_reminder_notification_fd8968f7",
+      "path": "frontend/features/reminder_notification/notification_debug.html",
+      "route": "/debug/notifications/{notification_id}",
+      "screen_id": "capability_reminder_notification_fd8968f7.screen.notification_debug"
+    },
+    {
+      "feature_id": "capability_buy_skip_decision_c984506c",
+      "path": "frontend/features/buy_skip_decision/decision_screen.html",
+      "route": "/decision/:item_id",
+      "screen_id": "capability_buy_skip_decision_c984506c.screen.decision_screen"
+    },
+    {
+      "feature_id": "capability_buy_skip_decision_c984506c",
+      "path": "frontend/features/buy_skip_decision/skip_confirmation_screen.html",
+      "route": "/decision/:item_id/skipped",
+      "screen_id": "capability_buy_skip_decision_c984506c.screen.skip_confirmation"
+    },
+    {
+      "feature_id": "capability_track_estimated_money_saved_66579af4",
+      "path": "frontend/features/track_estimated_money_saved/savings_dashboard.html",
+      "route": "/savings",
+      "screen_id": "capability_track_estimated_money_saved_66579af4.screen.savings_dashboard"
+    },
+    {
+      "feature_id": "capability_track_estimated_money_saved_66579af4",
+      "path": "frontend/features/track_estimated_money_saved/savings_history.html",
+      "route": "/savings/history",
+      "screen_id": "capability_track_estimated_money_saved_66579af4.screen.savings_history"
+    },
+    {
+      "feature_id": "capability_track_estimated_money_saved_66579af4",
+      "path": "frontend/features/track_estimated_money_saved/skip_confirmation.html",
+      "route": "/savings/skip-confirmation",
+      "screen_id": "capability_track_estimated_money_saved_66579af4.screen.skip_confirmation"
+    }
+  ],
+  "source": {
+    "architecture_workspace_id": "3144151e-8080-4e58-9d2e-1c319ce4ade8",
+    "backend_package_hash": "ddb8a3cbeffe3a7634ea17e5f65f42e655dd79d7d2b69be6f6d3e6297ba2226b",
+    "backend_package_id": "89f56cc2-2571-4648-9f30-fddda2e491fc",
+    "backend_workspace_id": "68dbde97-6a34-45aa-be09-390a2c3e46f2",
+    "feature_hashes": {
+      "capability_buy_skip_decision_c984506c": "f427e23914cd9706ef27e4de910fe61e01fc9a6cd5c56c5f04c2680ab7cc1868",
+      "capability_countdown_timer_df84298e": "5f6f832e2fa8d7b78ca3d43f9882411bc1d5444618ad170f2084be19e6709581",
+      "capability_reminder_notification_fd8968f7": "5defd8bcceb24848b73783be26d3b53e10aeb58f219d68d59943d80722c466ff",
+      "capability_save_items_with_price_bd77265a": "f73bf6f0e83cf558e00543db26b335f985cd12d1acca2080e0eca0aaab362f54",
+      "capability_set_cooling_off_period_ed5144db": "51eea4fe29de4e7b33ecc81364544381f6b0d5dba5243fee63e39b4856e695cd",
+      "capability_track_estimated_money_saved_66579af4": "1f1208d32ecdcff7d2aecdca4d2e6a2bad5be7b25a8a241f99703eac809520de"
+    },
+    "foundation_hash": "f79f4074451d1adb6e21cef83d5d41939c8cb5390e2c75c0cd769063cce6f557"
+  }
+}

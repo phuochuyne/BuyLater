@@ -13,14 +13,12 @@ class Settings:
     database_url: str
     jwt_secret: str
     jwt_issuer: str
-    internal_job_token: str
 
 
 def get_settings() -> Settings:
     database_url = os.getenv("DATABASE_URL", "").strip()
     jwt_secret = os.getenv("JWT_SECRET", "").strip()
     jwt_issuer = os.getenv("JWT_ISSUER", "zorentia-app").strip()
-    internal_job_token = os.getenv("INTERNAL_JOB_TOKEN", "").strip()
     if not database_url:
         raise RuntimeError("DATABASE_URL is required")
     if not jwt_secret:
@@ -29,5 +27,4 @@ def get_settings() -> Settings:
         database_url=database_url,
         jwt_secret=jwt_secret,
         jwt_issuer=jwt_issuer,
-        internal_job_token=internal_job_token,
     )

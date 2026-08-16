@@ -10,7 +10,7 @@ def test_feature_routes_are_registered():
         for rule in app.url_map.iter_rules()
         for method in (rule.methods or set())
     }
-    expected = (('/api/capability_save_items_with_price_bd77265a/saved-items', 'POST'), ('/api/capability_save_items_with_price_bd77265a/saved-items', 'GET'), ('/api/capability_save_items_with_price_bd77265a/saved-items/<item_id>', 'GET'))
+    expected = (('/api/capability_save_items_with_price_bd77265a/saved-items', 'POST'), ('/api/capability_save_items_with_price_bd77265a/saved-items', 'GET'), ('/api/capability_save_items_with_price_bd77265a/saved-items/<id>', 'GET'))
     assert all(route in actual for route in expected)
 
 
